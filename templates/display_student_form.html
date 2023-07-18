@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            font-size: 1.2em;
+        }
+        input{
+            border: none;
+        }
+        h1{
+            color: black;
+        }
+        input[type="submit"]{
+            border: none;
+            font-size: 1.1em;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: rgb(35, 151, 145);
+            color: white;
+            transition: .5s;
+        }
+        input[type="submit"]:hover{
+            transform:translate(10px,5px)
+        }
+        .abc{
+            width: fit-content;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: -20px 20px 50px rgb(70, 67, 67);
+            transition: .6s;
+        }
+        .abc:hover{
+            box-shadow: 20px 20px 50px rgb(70, 67, 67);
+        }
+
+        .input{
+            border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px black;
+        }
+
+        .input:hover{
+            background-color: tomato;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student form</h1>
+        <div class="abc">
+            <form method="POST">
+                {% csrf_token %}
+                <table cellpadding="10">
+                    <tr>{{SFO}}</tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="submit" class="input"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
